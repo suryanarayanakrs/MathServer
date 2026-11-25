@@ -1,5 +1,5 @@
 # Ex.03 Design a Website for Server Side Processing
-## Date:
+## Date:15.11.2026
 
 ## AIM:
 To create a web page to calculate Churn Rate using server-side scripts.
@@ -42,13 +42,35 @@ Render the result to the HTML template.
 Publish the website in Localhost.
 
 ## PROGRAM:
+```
+<html>
+    <head>
+        <title>churn calculator</title>
+    </head>
+    <body>
+        <h1>Surya Narayana K R S-26017252</h1>
+        <form method="POST">
+            {%csrf_token%}
+            <label>INITIAL: </label>
+            <input type="number" name="Initialcust" value="{{Initialcust}}" ><br><br>
+            <label>PRESENT: </label>
+            <input type="number" name="Presentcust" value="{{Presentcust}}"><br><br>
+            <label>CHURN_RATE: </label><input type="number" name="churn_rate" value="{{churn_rate}}"><br><br>
+            <input type="submit" value="calculate">
+            <input type="reset">
+        </form>
+        
+    </body>
+</html>
 
+
+```
 
 ## OUTPUT - SERVER SIDE:
-
+![alt text](<Screenshot (66).png>)
 
 ## OUTPUT - WEBPAGE:
-
+![alt text](<Screenshot (67).png>)
 
 ## RESULT:
 The the web page to calculate Churn Rate using server-side scripts is created successfully.
