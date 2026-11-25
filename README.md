@@ -63,18 +63,6 @@ Publish the website in Localhost.
     </body>
 </html>
 
-urls.py
-
-from django.contrib import admin
-from django.urls import path
-from yapp import views
-
-urlpatterns=[
-    path('admin/', admin.site.urls),
-    path('',views.calculateChurnRate,name='calculateChurnRate'),
-]
-
-
 views.py
 
 from django.shortcuts import render
@@ -86,6 +74,18 @@ def calculateChurnRate(request):
     print("Presentcust =",Presentcust)
     print("churn_rate =",churn_rate)
     return render(request, 'yapp/sam.html',{'Initialcust': Initialcust, 'Presentcust': Presentcust, 'churn_rate': churn_rate })
+
+urls.py
+
+from django.contrib import admin
+from django.urls import path
+from yapp import views
+
+urlpatterns=[
+    path('admin/', admin.site.urls),
+    path('',views.calculateChurnRate,name='calculateChurnRate'),
+]
+
 
 
 ```
